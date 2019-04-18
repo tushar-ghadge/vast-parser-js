@@ -1,21 +1,30 @@
-/** @discuss - how to keep the base structure of each file. */
-exports.default = {
-    isNumber : isNumber,
-    isObject : isObject
-}
+// list of functions need for validation.
+module.exports = function () {
 
-// not sure but guessing this is an error/global object.
-isNumber = function (n) {
-    if (typeof n != 'undefined' && typeof n === 'number' && Number.isFinite(n)) {
-        return true;
+    function isNumber () {
+        if (typeof n !== 'undefined' && typeof n === 'number' && Number.isFinite(n)) {
+            return true;
+          }
+          return false;
     }
-    return false;
-}
 
-// not sure but guessing this is an error/global object.
-isObject = function (obj) {
-    if (typeof obj !== 'undefined' && obj !== null && _typeof(obj) === 'object') {
-        return true;
+    function isObject (obj) {
+        if (typeof obj !== 'undefined' && obj !== null && typeof obj === 'object') {
+            return true;
+          }
+          return false;
     }
-    return false;
-}
+
+    function hasDomParser () {
+        if (typeof window.DOMParser !== 'undefined') {
+            return true;
+          }
+          return false;
+    }
+
+    return {
+        isNumber: isNumber,
+        isObject: isObject,
+        hasDomParser: hasDomParser
+    };
+};
