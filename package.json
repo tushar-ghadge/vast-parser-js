@@ -1,0 +1,22 @@
+{
+    "name": "vast-parser-js",
+    "version": "0.0.0",
+    "author": "",
+    "description": "",
+    "repository": {
+      "type": "git"
+    },
+    "keywords": [
+      "vast",
+      "advertising",
+      "media",
+      "video",
+      "html5",
+      "javascript"
+    ],
+    "devDependencies": {
+    },
+    "dependencies": {
+    }
+  }
+  
